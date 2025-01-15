@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="google-site-verification" content="Fl0EDleOfABfuuF8c3TNZcD5OMxEmtzDq9Y0bVE5qYI" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Home</title>
+
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+	<link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+	<link rel="stylesheet" href="assets/css/smoothproducts.css">
+	<style>
+		ul,
+		li {
+			margin: 0px;
+			list-style-type: none;
+		}
+
+		.js-pscroll {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.table100 {
+			background-color: #78DBE7;
+
+		}
+
+		table {
+			width: 100%;
+		}
+
+		th,
+		td {
+			font-weight: unset;
+			padding-right: 10px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-align: center
+		}
+
+		tr {
+			transition: all 0.5s ease-out;
+		}
+
+		.grid {
+			display: grid
+		}
+
+		.column1 {
+			max-width: 33%;
+			padding-left: 15px;
+			color: black;
+		}
+
+		.column2 {
+			max-width: 33%;
+			padding-right: 15px;
+			font-weight: bold;
+			color: black;
+		}
+
+		.table100-head th {
+			padding-top: 18px;
+			padding-bottom: 18px;
+			padding-left: 20px;
+		}
+
+		.table100-body td {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+
+		.table100 {
+			position: relative;
+			padding-top: 60px;
+		}
+
+		.table100-head {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.table100-body {
+			max-height: 585px;
+			overflow: auto;
+			text-align: center
+		}
+
+		/*table header*/
+		.table100.ver1 th {
+			font-family: Montserrat;
+			font-size: 1.4rem;
+			/* color: #fff; */
+			line-height: 1.4;
+
+			background-color: #4747a1;
+		}
+
+		.table100.ver1 td {
+			font-family: Montserrat;
+			font-size: 1.2rem;
+			/* color: #808080; */
+			line-height: 1.4;
+		}
+
+		.schedule {
+			margin-right: 20rem;
+			margin-left: 20rem;
+		}
+
+		.table100.ver1 .table100-body tr:nth-child(even) {
+			background-color: #E1E9EA;
+			color: gainsboro;
+		}
+
+		.table100.ver1 .table100-body tr:nth-child(odd) {
+			background-color: #D3DBDC;
+			color: gainsboro;
+		}
+
+		.table100.ver1 {
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+			-moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+			-webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+			-o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+			-ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+		}
+
+		#day {
+			width: 10rem;
+		}
+
+		#daynav {
+			color: white;
+			display: inline-flex;
+
+		}
+
+		@media (max-width: 1500px) {
+			.schedule {
+				margin: 0vh 10vw !important;
+			}
+
+		}
+
+		@media (max-width: 992px) {
+			.schedule {
+				float: none;
+			}
+			#schedule-section {
+				height: auto !important;
+				padding-bottom: 60px !important;
+			}
+			table {
+				min-width: 300px !important;
+			}
+
+		}
+
+		@media (max-width: 700px) {
+			.cell100,
+			th {
+				font-size: 0.8rem !important;
+				padding-top: 8px !important;
+				padding-bottom: 8px !important;
+			}
+			.table100 {
+				padding-top: 30px !important;
+			}
+
+		}
+
+		.gap-5 {
+			gap: 1.25rem
+		}
+
+		.gap-y-5 {
+			row-gap: 1.25rem
+		}
+
+		.grid-flow-row {
+			grid-auto-flow: row
+		}
+
+		.grid-cols-1 {
+			grid-template-columns: repeat(1, minmax(0, 1fr))
+		}
+
+		.grid-rows-3 {
+			grid-template-rows: repeat(3, minmax(0, 1fr))
+		}
+
+		@media (min-width:768px) {
+			.md\:gap-x-10 {
+				-moz-column-gap: 2.5rem;
+				column-gap: 2.5rem
+			}
+			.md\:grid-cols-2 {
+				grid-template-columns: repeat(2, minmax(0, 1fr))
+			}
+			.md\:grid-cols-3 {
+				grid-template-columns: repeat(3, minmax(0, 1fr))
+			}
+			.md\:col-start-1 {
+				grid-column-start: 1
+			}
+			.md\:col-start-2 {
+				grid-column-start: 2
+			}
+			.md\:grid-rows-1 {
+				grid-template-rows: repeat(1, minmax(0, 1fr))
+			}
+			.md\:row-start-2 {
+				grid-row-start: 2
+			}
+			.md\:row-start-3 {
+				grid-row-start: 3
+			}
+			.md\:row-start-4 {
+				grid-row-start: 4
+			}
+			.md\:row-start-5 {
+				grid-row-start: 5
+			}
+			.md\:row-start-6 {
+				grid-row-start: 6
+			}
+			.md\:row-start-7 {
+				grid-row-start: 7
+			}
+		}
+
+		.border-2 {
+			border-width: 2px !important;
+      border-style: solid !important;
+      border-color: black !important;
+		}
+.font-sans{
+    font-family:Renner
+    color: black !important;
+}
+		.font-serif {
+			font-family: Crimson Pro
+      color: black !important;
+		}
+
+		.mb-5 {
+			margin-bottom: 1.25rem
+		}
+    .p-5{
+    padding:1.25rem
+}
+.text-xl{
+    font-size:1.25rem
+}
+.text-2xl{
+    font-size:1.5rem;
+    line-height:2rem
+}
+#box{
+  border-width: 2px !important;
+      border-style: solid !important;
+      border-color: black !important;
+}
+#boxtext{
+  color: black
+}
+	</style>
+</head>
+
+<body class="text-primary">
+	<nav class="navbar navbar-light navbar-expand-lg py-1 fixed-top bg-white clean-navbar" style="box-shadow: 0px 5px 8px #696969">
+		<script>
+
+		</script>
+		<div class="container"><a class="navbar-brand logo" href="#"><img src="assets/img/HackVH%20logo.svg" style="width: 70px;height: 70px;">HackVH</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#home">Home</a></li>
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#about">About HackVH</a></li>
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#schedule-section">Schedule</a></li>
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#sponsors">Prizes</a></li>
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#about-us">FAQs</a></li>
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link active js-scroll-trigger" href="#prizes">Sponsors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section id="home" class="clean-block clean-hero">
+                <script  src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+                 <div id="vantaBirds"></div>
+
+
+            <div class="text">
+                <h1 class="display-3"><img src="assets/img/HackVH%20logo.svg" style="width: 150px;margin-bottom:10px">HackVH</h1>
+                <p>The premier virtual high school hackathon based in the Chicagoland area.<br/>April 16th - 18th, 2021</p><button class="btn btn-outline-light btn-lg" type="button"
+                onclick="window.open('https://docs.google.com/presentation/d/1Pddc7ztM33rz9DvVyw1xiShO7WiOokQZVhZn_g9vWdc/edit','_blank')" >Congratulations to the winners!</button>
+
+                <script>
+                  VANTA.WAVES({
+                    el: "#vantaBirds",
+                    mouseControls: false,
+                    touchControls: false,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    shininess: 0,
+                    waveHeight: 22.50,
+                    waveSpeed: 0.60,
+                    color: 0x5d7c9d,
+                    zoom: 0.8
+                  })
+                </script>
+
+        </section>
+
+        <section id="about" class="clean-block clean-info dark" style = "background-color:#073763ff3">
+            <div class="container">
+                <div class="block-heading">
+                    
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-6"><img style="width:80%" class="img-thumbnail" src="https://www.joc.com/sites/default/files/field_feature_image/Hackathon%20concept_0.jpg"></div>
+                    <div class="col-md-6">
+                        <div style="margin-top: 5%; font-size: 20px; color:#616161" class="getting-started-info">
+                          <h2 class="text-info" style="color:#616161;">About HackVH</h2>
+                    <p style="color:#616161">Students will come together (online) from April 16th-18th to compete and create amazing projects!</p>
+                            <p >Hackers will spend 36 hours designing and coding projects to provide technical solutions for a given prompt.</p>
+                </div>
+            </div>
+        </section>
+      
+        <section id="schedule-section" style="padding: 5vh 0vh 5vh 0vh; background: #92bbfc">
+         <div class="schedule-container" style="text-align: center">
+            <h1 id="title" style="
+               font-size: 2.5rem;
+               font-family: 'Montserrat';
+               font-weight: 600;
+               color: #ffffff;
+               margin-top: 1%;
+               ">
+               Schedule
+            </h1>
+            <hr width="200px" style="
+               height: 1px;
+               border-color: gainsboro;
+               background-color: gainsboro;
+               ">
+            <div class="innercontainer">
+               <div class="schedule">
+                  <div id ="daynav" style="margin-bottom: 2vh">
+                    <span style="cursor: pointer" class="leftarrow" onclick="shift(-1)">◄</span>
+                    <h3 id="day"> Friday </h3>
+                    <span style="cursor: pointer" class="rightarrow" onclick="shift(1)">►</span>
+                  </div>
+                    <div id="sched0" style="box-shadow: 5px 10px 10px #303070">
+                     <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                           <table>
+                              <thead>
+                                 <tr class="row100 head">
+                                    <th class="column1 header1" style ="color:white;font-weight:bold">Time</th>
+                                    <th class="column2 header1" style ="color:white">Event</th>
+                                 </tr>
+                              </thead>
+                           </table>
+                        </div>
+                        <div class="table100-body js-pscroll">
+                           <table class="schedule1" id="table-saturday" style="overflow-y: hidden; overflow-x: visible">
+                              <tbody>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">6:00 PM - 7:00 PM</td>
+                                    <td class="cell100 column2">Opening ceremony</td>
+                                 </tr>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">7:00 PM - 8:00 PM</td>
+                                    <td class="cell100 column2">Team formation and planning</td>
+                                 </tr>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">8:00 PM - 9:00 PM</td>
+                                    <td class="cell100 column2">Intro to Github workshop</td>
+                                 </tr>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">9:00 PM - 10:00 PM</td>
+                                    <td class="cell100 column2">Intro to HTML workshop</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">10:00 PM - 11:00 PM</td>
+                                    <td class="cell100 column2">Intro to React Native workshop</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">11:00 PM - 10:00 AM</td>
+                                    <td class="cell100 column2">Work time</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="sched1" style="box-shadow: 5px 10px 10px #303070; display: none">
+                     <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                           <table>
+                              <thead>
+                                 <tr class="row100 head">
+                                    <th class="column1 header1" style="color: white; font-weight: bold">Time</th>
+                                    <th class="column2 header1" style="color: white">Event</th>
+                                 </tr>
+                              </thead>
+                           </table>
+                        </div>
+                        <div class="table100-body js-pscroll">
+                           <table class="schedule1" id="table-saturday" style="overflow-y: hidden; overflow-x: hidden">
+                              <tbody>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">10:00 AM - 11:00 AM</td>
+                                    <td class="cell100 column2">IMC Trading workshop</td>
+                                 </tr>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">11:00 PM - 3:00 PM</td>
+                                    <td class="cell100 column2">Work time</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">3:00 PM - 4:00 PM </td>
+                                    <td class="cell100 column2">EchoAR workshop</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">4:00 PM - 5:00 PM</td>
+                                    <td class="cell100 column2">Intro to Battlesnakes Workshop</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">5:00 PM - 8:00 PM</td>
+                                    <td class="cell100 column2">Battlesnakes Mini Competition</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">8:00 PM - 10:00 PM</td>
+                                    <td class="cell100 column2">Work time</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">10:00 PM - 11:00 PM</td>
+                                    <td class="cell100 column2">Email Automation workshop (Free College gear!)</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">11:00 PM - 12:00 PM</td>
+                                    <td class="cell100 column2">Midnight Shellshock</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">12:00 AM - 9:00 AM</td>
+                                    <td class="cell100 column2">Work time</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="sched2" style="display: none; box-shadow: 5px 10px 10px #303070">
+                     <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                           <table>
+                              <thead>
+                                 <tr class="row100 head">
+                                    <th class="column1" style="color: white;font-weight: bold">Time</th>
+                                    <th class="column2" style="color: white">Event</th>
+                                 </tr>
+                              </thead>
+                           </table>
+                        </div>
+                        <div class="table100-body js-pscroll">
+                           <table class="schedule1" id="table-sunday" style="overflow-y: hidden; overflow-x: hidden">
+                              <tbody>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">9:00 AM-10:00 AM</td>
+                                    <td class="cell100 column2">Finalize submissions and create videos</td>
+                                 </tr>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">10:00 - 10:30 AM</td>
+                                    <td class="cell100 column2">Submit Projects</td>
+                                 </tr>
+                                 <tr class="row100 body">
+                                    <td class="cell100 column1">10:30 PM - 4:00 PM</td>
+                                    <td class="cell100 column2">Nap/relaxation time!</td>
+                                 </tr>
+				 <tr class="row100 body">
+                                    <td class="cell100 column1">5:00 PM - 5:30 PM</td>
+                                    <td class="cell100 column2">Closing Ceremony (Winners Announced!)</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+        <section id="sponsors" class="clean-block clean-info dark">
+            <div class="container" style="width:80%;">
+                <div class="block-heading">
+                    <h2 class="text-info" style="color:#001d75">Prizes</h2>
+                    <p style="color:#001d75">Our sponsors came together to help us get these prizes to reward the winners of HackVH!</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-5">
+                  <div class="border-2 p-5 " id = "box">
+                      <h3 class="font-sans text-2xl" id = "boxtext">BEST OVERALL</h3>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">1st - $1100 value</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">2nd - $700 value</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">3rd - $500 value</p>
+                  </div>
+                  <div class="border-2 p-5 ">
+                      <h3 class="font-sans text-2xl" id = "boxtext">HONORABLE MENTIONS</h3>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">A year of Wolfram|One Personal Edition plus a one-year subscription to Wolfram|Alpha Pro.</p>
+                  </div>
+                  <div class="border-2 p-5 ">
+                      <h3 class="font-sans text-2xl" id = "boxtext">BEST BEGINNER</h3>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">1st - $400 value</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">2nd - $200 value</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">3rd - $100 value</p>
+                  </div>
+                  <div class="border-2 p-5 ">
+                      <h3 class="font-sans text-2xl" id = "boxtext">BEST ECHOAR</h3>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">$50 Amazon gift card (per team) + 1 month free Business Tier access (per team member)</p>
+                  </div>
+
+                  <div class="border-2 p-5 ">
+                      <h3 class="font-sans text-2xl" id = "boxtext">BEST ILLINOIS TEAM</h3>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">1st - $450 value</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">Runner Up: $150 and 4 Abbott Robot kits + Sling Bags
+                     </p>
+                  </div>
+                  <div class="border-2 p-5 ">
+                      <h3 class="font-sans text-2xl" id = "boxtext">FREE FOR EVERYONE</h3>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">Free T-shirts and water bottles from IMC Trading for all hackers.</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">Free Business Tier access to EchoAR during the event.</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext">Free 6 month repl.it Hacker Plan subscription.</p>
+                      <p class="font-serif text-xl mb-5" id = "boxtext"> Access to Wolfram|One for thirty days. Wolfram|One includes both Desktop and Cloud access, full access to the Wolfram Language and Knowledgebase, FreeCDF Deployment, 5000 Wolfram|Alpha API calls, 5000 Cloud Credits, 2 installations per user and 2 GB of Cloud Storage.</p>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="clean-block about-us dark" style="background-color:#92bbfc;height: 550px">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info" style="color:#fff">FAQs</h2>
+                    <hr width="200px" style="
+                      height: 1px;
+                      border-color: #fff;
+                      background-color: #fff;
+                      ">
+
+                   <div id="accordion"  class = "grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-5">
+                      <div class="card" style="background: none; border-style: none">
+                        <div class="card-header" id="headingOne" style="background: none; border-style: none">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <h5>What is a hackathon?</h5>
+                            </button>
+                          </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" >
+                          <div class="card-body" style="color:#fff">
+                            Hackathons allow you to create your craziest ideas! You will work in a team, of up to four people, for 36 hours to create a project that addresses a theme. There are no restrictions, so let your imagination run wild!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card" style="background: none; border-style: none">
+                        <div class="card-header" id="headingTwo" style="background: none; border-style: none">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <h5>What if I don't know how to code?</h5>
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body" style="color:#fff">
+                            We encourage students of all experience levels to attend. We will have workshops led by industry professionals for you to experiment with new technologies. Why not try getting started on your first project?
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card" style="background: none; border-style: none">
+                        <div class="card-header" id="headingThree" style="background: none; border-style: none">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <h5>Who can attend?</h5>
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body" style="color:#fff">
+                            We welcome any high school student to attend. Unfortunately, college or middle school students are not eligible.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card" style="background: none; border-style: none">
+                        <div class="card-header" id="headingFive" style="background: none; border-style: none">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                              <h5>What is the cost of attendance?</h5>
+                            </button>
+                          </h5>
+                        </div>
+
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion" >
+                          <div class="card-body" style="color:#fff">
+                            HackVH is completely free! However, you will need an internet connection and a computer to work on.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card" style="background: none; border-style: none">
+                        <div class="card-header" id="headingFive" style="background: none; border-style: none">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                              <h5>What if I don't have a team?</h5>
+                            </button>
+                          </h5>
+                        </div>
+
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion" >
+                          <div class="card-body" style="color:#fff">
+                            Don't worry! Many participants don't have a complete team before the event. We will have a dedicated channel where you can find other hackers and team up!
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+
+            </div>
+        </section>
+
+        
+        <section id="prizes" class="clean-block slider light">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info" style="color:#001d75">Our Sponsors</h2>
+                </div>
+                <div class="align-items-center">
+                      <img src="assets/img/Sponsors.svg" style = "width: 100%">
+                </div>
+            </div>
+            
+          
+
+        </section>
+
+
+    </main>
+    <footer class="page-footer dark" style="border-color: rgb(0,0,0);">
+        <div class="container align-items-center">
+            <div class="row">
+                <div class="col-sm"><img src="assets/img/HackVH%20logo.svg" style="width: 25vw;margin: 1px;height: 150px;padding: 3px;"></div>
+                <div class="col-sm">
+                    <h5>About</h5>
+                    <ul>
+                        <li><a href="#about-us">FAQ</a></li>
+                        <li><a href="mailto:rahul.gupta@vhhscougars.org,anirudh.adiraju@vhhscougars.org, HackVH0@gmail.com">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h5>Social</h5>
+                    <ul>
+                        <li><a onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdpF_yqFlaCrPCvDkOzZkSbwc1gY4oGTm-p00Zim-s2jJ6flw/viewform?usp=sf_link','_blank')">Register</a></li>
+                        <li><a href="https://discord.gg/ct3YzD7vYj">Discord</a></li>
+                        <li><a href="#">Devpost</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2020 by HackVH</p>
+        </div>
+    </footer>
+    <script>
+
+      function shift(forward) {
+        const days = [" Friday ", " Saturday ", " Sunday "]
+        const scheds = {" Friday ": "sched0", " Saturday ": "sched1", " Sunday ": "sched2"}
+        var currindex = days.indexOf(document.getElementById("day").innerHTML)
+        currindex += forward
+        if (currindex < 0){
+          currindex += days.length
+        }
+        else if (currindex == days.length){
+          currindex = 0
+        }
+        var currday = days[currindex]
+        document.getElementById("day").innerHTML = currday;
+        document.getElementById(scheds[currday]).style.display = "block";
+        for (const day of days){
+          if (day != currday){
+            document.getElementById(scheds[day]).style.display = "none";
+          }
+        }
+      }
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    
+</body>
+
+</html>
