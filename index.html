@@ -5,7 +5,7 @@
    <meta name="google-site-verification" content="Fl0EDleOfABfuuF8c3TNZcD5OMxEmtzDq9Y0bVE5qYI" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>HackVH 2025</title>
+	<title>HackVH <span id="currentYear"></span></title>
 
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
@@ -14,6 +14,17 @@
 	<link rel="stylesheet" href="assets/css/smoothproducts.css">
 	<style>
 		/* Add your custom styles here */
+		.schedule-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.schedule {
+			width: 80%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
 	</style>
 </head>
 
@@ -21,7 +32,7 @@
 	<nav class="navbar navbar-light navbar-expand-lg py-1 fixed-top bg-white clean-navbar" style="box-shadow: 0px 5px 8px #696969">
 		<div class="container">
 			<a class="navbar-brand logo" href="#">
-				<img src="assets/img/HackVH%20logo.svg" style="width: 70px;height: 70px;">HackVH 2025
+				<img src="assets/img/HackVH%20logo.svg" style="width: 70px;height: 70px;">HackVH <span id="currentYearNav"></span>
 			</a>
 			<button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
 				<span class="sr-only">Toggle navigation</span>
@@ -45,8 +56,8 @@
 			<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 			<div id="vantaBirds"></div>
 			<div class="text">
-				<h1 class="display-3"><img src="assets/img/HackVH%20logo.svg" style="width: 150px;margin-bottom:10px">HackVH 2025</h1>
-				<p>The premier virtual high school hackathon based in the Chicagoland area.<br/>April 18th - 20th, 2025</p>
+				<h1 class="display-3"><img src="assets/img/HackVH%20logo.svg" style="width: 150px;margin-bottom:10px">HackVH <span id="currentYearHero"></span></h1>
+				<p>The premier multi high school hackathon based in the Chicagoland area.<br/>March X-X, <span id="currentYearDate"></span></p>
 				<button class="btn btn-outline-light btn-lg" type="button" onclick="window.open('https://hackvh2025.devpost.com','_blank')">Register Now!</button>
 			</div>
 			<script>
@@ -71,9 +82,9 @@
 		<section id="about" class="clean-block clean-info dark" style="background-color:#073763ff3">
 			<div class="container">
 				<div class="block-heading">
-					<h2 class="text-info" style="color:#616161;">About HackVH 2025</h2>
-					<p style="color:#616161">Students will come together (online) from April 18th-20th to compete and create amazing projects!</p>
-					<p>Hackers will spend 36 hours designing and coding projects to provide technical solutions for a given prompt.</p>
+					<h2 class="text-info" style="color:#616161;">About HackVH <span id="currentYearAbout"></span></h2>
+					<p style="color:#616161">Students will come together (online) from March X-X to compete and create amazing projects!</p>
+					<p>Hackers will spend 24 hours designing and coding projects to provide technical solutions for a given prompt.</p>
 				</div>
 				<div class="row align-items-center">
 					<div class="col-md-6">
@@ -81,7 +92,7 @@
 					</div>
 					<div class="col-md-6">
 						<div style="margin-top: 5%; font-size: 20px; color:#616161" class="getting-started-info">
-							<p>HackVH 2025 is all about innovation, collaboration, and creativity. Join us for an unforgettable experience!</p>
+							<p>HackVH <span id="currentYearAbout2"></span> is all about innovation, collaboration, and creativity. Join us for an unforgettable experience!</p>
 						</div>
 					</div>
 				</div>
@@ -96,7 +107,7 @@
 					<div class="schedule">
 						<div id="daynav" style="margin-bottom: 2vh">
 							<span style="cursor: pointer" class="leftarrow" onclick="shift(-1)">◄</span>
-							<h3 id="day"> Friday </h3>
+							<h3 id="day"> Day 1 </h3>
 							<span style="cursor: pointer" class="rightarrow" onclick="shift(1)">►</span>
 						</div>
 						<div id="sched0" style="box-shadow: 5px 10px 10px #303070">
@@ -115,28 +126,28 @@
 									<table class="schedule1" id="table-saturday" style="overflow-y: hidden; overflow-x: visible">
 										<tbody>
 											<tr class="row100 body">
-												<td class="cell100 column1">6:00 PM - 7:00 PM</td>
-												<td class="cell100 column2">Opening ceremony</td>
+												<td class="cell100 column1">11:00 AM</td>
+												<td class="cell100 column2">Find out the prompt</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">7:00 PM - 8:00 PM</td>
-												<td class="cell100 column2">Team formation and planning</td>
+												<td class="cell100 column1">12:00 PM</td>
+												<td class="cell100 column2">Lunch & Speaker</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">8:00 PM - 9:00 PM</td>
-												<td class="cell100 column2">Intro to AI and Machine Learning workshop</td>
+												<td class="cell100 column1">1:00 PM - 4:00 PM</td>
+												<td class="cell100 column2">Workshops & Mini-Competition</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">9:00 PM - 10:00 PM</td>
-												<td class="cell100 column2">Intro to Web Development workshop</td>
+												<td class="cell100 column1">5:30 PM</td>
+												<td class="cell100 column2">Dinner & Speaker</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">10:00 PM - 11:00 PM</td>
-												<td class="cell100 column2">Intro to Blockchain workshop</td>
+												<td class="cell100 column1">7:00 PM</td>
+												<td class="cell100 column2">Last Workshop</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">11:00 PM - 10:00 AM</td>
-												<td class="cell100 column2">Work time</td>
+												<td class="cell100 column1">10:00 PM</td>
+												<td class="cell100 column2">Dessert & Send Participants Home</td>
 											</tr>
 										</tbody>
 									</table>
@@ -159,72 +170,16 @@
 									<table class="schedule1" id="table-saturday" style="overflow-y: hidden; overflow-x: hidden">
 										<tbody>
 											<tr class="row100 body">
-												<td class="cell100 column1">10:00 AM - 11:00 AM</td>
-												<td class="cell100 column2">Advanced AI Workshop</td>
+												<td class="cell100 column1">9:00 AM</td>
+												<td class="cell100 column2">Breakfast</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">11:00 AM - 3:00 PM</td>
-												<td class="cell100 column2">Work time</td>
+												<td class="cell100 column1">10:00 AM</td>
+												<td class="cell100 column2">Project Presentations</td>
 											</tr>
 											<tr class="row100 body">
-												<td class="cell100 column1">3:00 PM - 4:00 PM</td>
-												<td class="cell100 column2">Cloud Computing Workshop</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">4:00 PM - 5:00 PM</td>
-												<td class="cell100 column2">Intro to Cybersecurity Workshop</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">5:00 PM - 8:00 PM</td>
-												<td class="cell100 column2">Capture the Flag Competition</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">8:00 PM - 10:00 PM</td>
-												<td class="cell100 column2">Work time</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">10:00 PM - 11:00 PM</td>
-												<td class="cell100 column2">Midnight Trivia</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">11:00 PM - 12:00 AM</td>
-												<td class="cell100 column2">Work time</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-						<div id="sched2" style="display: none; box-shadow: 5px 10px 10px #303070">
-							<div class="table100 ver1 m-b-110">
-								<div class="table100-head">
-									<table>
-										<thead>
-											<tr class="row100 head">
-												<th class="column1" style="color: white;font-weight: bold">Time</th>
-												<th class="column2" style="color: white">Event</th>
-											</tr>
-										</thead>
-									</table>
-								</div>
-								<div class="table100-body js-pscroll">
-									<table class="schedule1" id="table-sunday" style="overflow-y: hidden; overflow-x: hidden">
-										<tbody>
-											<tr class="row100 body">
-												<td class="cell100 column1">9:00 AM - 10:00 AM</td>
-												<td class="cell100 column2">Finalize submissions and create videos</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">10:00 AM - 10:30 AM</td>
-												<td class="cell100 column2">Submit Projects</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">10:30 AM - 4:00 PM</td>
-												<td class="cell100 column2">Judging and Networking</td>
-											</tr>
-											<tr class="row100 body">
-												<td class="cell100 column1">5:00 PM - 5:30 PM</td>
-												<td class="cell100 column2">Closing Ceremony (Winners Announced!)</td>
+												<td class="cell100 column1">12:00 PM</td>
+												<td class="cell100 column2">Lunch & Awards Ceremony</td>
 											</tr>
 										</tbody>
 									</table>
@@ -240,38 +195,20 @@
 			<div class="container" style="width:80%;">
 				<div class="block-heading">
 					<h2 class="text-info" style="color:#001d75">Prizes</h2>
-					<p style="color:#001d75">Our sponsors came together to help us get these prizes to reward the winners of HackVH 2025!</p>
+					<p style="color:#001d75">Our sponsors came together to help us get these prizes to reward the winners of HackVH <span id="currentYearPrizes"></span>!</p>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-5">
 					<div class="border-2 p-5" id="box">
-						<h3 class="font-sans text-2xl" id="boxtext">BEST OVERALL</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">1st - $1500 value</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">2nd - $1000 value</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">3rd - $750 value</p>
+						<h3 class="font-sans text-2xl" id="boxtext">CODING DIVISION</h3>
+						<p class="font-serif text-xl mb-5" id="boxtext">1st - $1000</p>
+						<p class="font-serif text-xl mb-5" id="boxtext">2nd - $500</p>
+						<p class="font-serif text-xl mb-5" id="boxtext">3rd - $250</p>
 					</div>
 					<div class="border-2 p-5">
-						<h3 class="font-sans text-2xl" id="boxtext">HONORABLE MENTIONS</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">A year of Wolfram|One Personal Edition plus a one-year subscription to Wolfram|Alpha Pro.</p>
-					</div>
-					<div class="border-2 p-5">
-						<h3 class="font-sans text-2xl" id="boxtext">BEST BEGINNER</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">1st - $500 value</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">2nd - $300 value</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">3rd - $200 value</p>
-					</div>
-					<div class="border-2 p-5">
-						<h3 class="font-sans text-2xl" id="boxtext">BEST AI PROJECT</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">$1000 in prizes and mentorship opportunities</p>
-					</div>
-					<div class="border-2 p-5">
-						<h3 class="font-sans text-2xl" id="boxtext">BEST ILLINOIS TEAM</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">1st - $600 value</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">Runner Up: $300 and tech gadgets</p>
-					</div>
-					<div class="border-2 p-5">
-						<h3 class="font-sans text-2xl" id="boxtext">FREE FOR EVERYONE</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">Free T-shirts and swag for all hackers.</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">Free access to premium tools and APIs during the event.</p>
+						<h3 class="font-sans text-2xl" id="boxtext">CONCEPT DIVISION</h3>
+						<p class="font-serif text-xl mb-5" id="boxtext">1st - $500</p>
+						<p class="font-serif text-xl mb-5" id="boxtext">2nd - $250</p>
+						<p class="font-serif text-xl mb-5" id="boxtext">3rd - $100</p>
 					</div>
 				</div>
 			</div>
@@ -293,7 +230,7 @@
 							</div>
 							<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="card-body" style="color:#fff">
-									Hackathons allow you to create your craziest ideas! You will work in a team, of up to four people, for 36 hours to create a project that addresses a theme. There are no restrictions, so let your imagination run wild!
+									Hackathons allow you to create your craziest ideas! You will work in a team, of up to four people, for 24 hours to create a project that addresses a theme. There are no restrictions, so let your imagination run wild!
 								</div>
 							</div>
 						</div>
@@ -384,20 +321,32 @@
 					<h5>Social</h5>
 					<ul>
 						<li><a onclick="window.open('https://hackvh2025.devpost.com','_blank')">Register</a></li>
-						<li><a href="https://discord.gg/hackvh2025">Discord</a></li>
+						<li><a href="https://discord.gg/9uxZZyApVJ">Discord</a></li>
 						<li><a href="#">Devpost</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="footer-copyright">
-			<p>© 2025 by HackVH</p>
+			<p>© <span id="currentYearFooter"></span> by HackVH</p>
 		</div>
 	</footer>
 	<script>
+		// Function to update the year dynamically
+		function updateYear() {
+			const currentYear = new Date().getFullYear();
+			document.querySelectorAll('#currentYear, #currentYearNav, #currentYearHero, #currentYearDate, #currentYearAbout, #currentYearAbout2, #currentYearPrizes, #currentYearFooter').forEach(element => {
+				element.textContent = currentYear;
+			});
+		}
+
+		// Call the function to update the year
+		updateYear();
+
+		// Schedule navigation function
 		function shift(forward) {
-			const days = [" Friday ", " Saturday ", " Sunday "];
-			const scheds = {" Friday ": "sched0", " Saturday ": "sched1", " Sunday ": "sched2"};
+			const days = [" Day 1 ", " Day 2 "];
+			const scheds = {" Day 1 ": "sched0", " Day 2 ": "sched1"};
 			var currindex = days.indexOf(document.getElementById("day").innerHTML);
 			currindex += forward;
 			if (currindex < 0) {
