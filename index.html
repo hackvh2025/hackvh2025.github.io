@@ -25,6 +25,25 @@
 			max-width: 800px;
 			margin: 0 auto;
 		}
+		.column {
+			float: left;
+			width: 45%; /* Adjusted width to accommodate horizontal padding */
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+			box-sizing: border-box; /* Ensures padding doesn’t increase the width */
+			border-radius: 10px; /* Curved borders */
+			border: 1px solid #ccc; /* Optional: Adds a subtle border */
+		  }
+		  
+		  /* Clear floats after the columns */
+		  .row:after {
+			content: "";
+			display: table;
+			clear: both;
+		  }
+					
 	</style>
 </head>
 
@@ -57,7 +76,8 @@
 			<div id="vantaBirds"></div>
 			<div class="text">
 				<h1 class="display-3"><img src="assets/img/HackVH%20logo.svg" style="width: 150px;margin-bottom:10px">HackVH <span id="currentYearHero"></span></h1>
-				<p>The premier multi high school hackathon based in the Chicagoland area.<br/>March 22-23, <span id="currentYearDate"></span></p>
+				<p>A D128 Event Where VHHS & LHS Teams Innovate to Solve Real-World Challenges in Healthcare & Engineering
+					<br/>March 22-23, <span id="currentYearDate"></span></p>
 				<button class="btn btn-outline-light btn-lg" type="button" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSegjMtgUJVFcwuktQ4djF44HRIESTL0SsUwTYL1jdy5G5SLbQ/viewform','_blank')">Register Now!</button>
 			</div>
 			<script>
@@ -83,16 +103,24 @@
 			<div class="container">
 				<div class="block-heading">
 					<h2 class="text-info" style="color:#616161;">About HackVH <span id="currentYearAbout"></span></h2>
-					<p style="color:#616161">Students will come together (online) from March 22-23 to compete and create amazing projects!</p>
-					<p>Hackers will spend 24 hours designing and coding projects to provide technical solutions for a given prompt.</p>
+					<p style="color:#616161">Get ready for 24 hours of innovation and problem-solving at <strong>HackVH 2025</strong>, happening <strong>in person</strong>!</p>
+					<p>This year, participants will tackle <b>two challenge prompts</b> —one in <b>healthcare</b> and one in <b>engineering</b>. You can compete in one of <b>two ways</b>:</p>
 				</div>
+				<div class="row">
+					<div class="column">
+						<b>Build a Solution</b><h6> - Design and code a functional project to solve the challenge and compete for a $1,000 prize pool.</h56>
+					</div>
+					
+					<div class="column"><b>Pitch an Idea</b><h6> - Develop a creative and well-researched solution (without coding) to compete for a $500 prize pool.</h6>
+					</div>
+				  </div><br><br>
 				<div class="row align-items-center">
 					<div class="col-md-6">
 						<img style="width:80%" class="img-thumbnail" src="https://www.joc.com/sites/default/files/field_feature_image/Hackathon%20concept_0.jpg">
 					</div>
 					<div class="col-md-6">
 						<div style="margin-top: 5%; font-size: 20px; color:#616161" class="getting-started-info">
-							<p>HackVH <span id="currentYearAbout2"></span> is all about innovation, collaboration, and creativity. Join us for an unforgettable experience!</p>
+							Whether you're coding an app or brainstorming the next big idea, this is your chance to showcase your skills, collaborate, and make an impact. Let’s innovate together!
 						</div>
 					</div>
 				</div>
