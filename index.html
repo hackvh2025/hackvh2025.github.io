@@ -13,116 +13,172 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 	<link rel="stylesheet" href="assets/css/smoothproducts.css">
 	<style>
-		/* Add your custom styles here */
-		/* Schedule Container */
-/* Schedule Container */
-.schedule-container {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start; /* Align schedules at the top */
-	flex-wrap: wrap; /* Allows stacking on smaller screens */
-	gap: 20px; /* Space between schedules */
-	padding: 20px;
-  }
-  
-  /* Schedule Wrapper */
-  .schedule {
-	display: flex;
-	width: 90%;
-	max-width: 1200px; /* Increased max width for better spacing */
-	justify-content: center;
-	gap: 20px;
-  }
-  
-  /* Individual Schedule Box */
-  .schedule-box {
-	flex: 1; /* Makes both schedules take equal space */
-	background: #2a2a5a;
-	padding: 15px;
-	border-radius: 8px;
-	box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
-	min-width: 300px; /* Prevents collapsing on smaller screens */
-  }
-  
-  /* Table Styling */
-  .table100 {
-	width: 100%;
-	border-radius: 8px;
-	overflow: hidden;
-  }
-  
-  .table100-head {
-	background: #444488;
-	border-radius: 8px 8px 0 0;
-  }
-  
-  .table100-head table {
-	width: 100%;
-	border-collapse: collapse;
-  }
-  
-  .table100-body {
-	background: #333366;
-	color: white;
-	border-radius: 0 0 8px 8px;
-	overflow-x: auto;
-  }
-  
-  /* Table Headers */
-  .header1 {
-	padding: 12px;
-	text-align: left;
-	font-size: 1.1em;
-	font-weight: bold;
-  }
-  
-  /* Table Rows */
-  .row100 {
-	border-bottom: 1px solid #555;
-  }
-  
-  .row100.body:hover {
-	background: rgba(255, 255, 255, 0.1);
-	transition: 0.3s;
-  }
-  
-  /* Table Cells */
-  .cell100 {
-	padding: 12px;
-  }
-  
-  /* Responsive Design: Stack Schedules Vertically on Small Screens */
-  @media (max-width: 800px) {
-	.schedule {
-	  flex-direction: column;
-	  align-items: center;
-	}
-  
-	.schedule-box {
-	  width: 100%;
-	}
-  }
-  
-		.column {
+		/* Existing Styles (Preserved) */
+		.schedule-container {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 20px;
+			padding: 20px;
+		  }
+		  
+		  .schedule {
+			display: flex;
+			width: 90%;
+			max-width: 1200px;
+			justify-content: center;
+			gap: 20px;
+		  }
+		  
+		  .schedule-box {
+			flex: 1;
+			background: #2a2a5a;
+			padding: 15px;
+			border-radius: 8px;
+			box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+			min-width: 300px;
+		  }
+		  
+		  .table100 {
+			width: 100%;
+			border-radius: 8px;
+			overflow: hidden;
+		  }
+		  
+		  .table100-head {
+			background: #444488;
+			border-radius: 8px 8px 0 0;
+		  }
+		  
+		  .table100-head table {
+			width: 100%;
+			border-collapse: collapse;
+		  }
+		  
+		  .table100-body {
+			background: #333366;
+			color: white;
+			border-radius: 0 0 8px 8px;
+			overflow-x: auto;
+		  }
+		  
+		  .header1 {
+			padding: 12px;
+			text-align: left;
+			font-size: 1.1em;
+			font-weight: bold;
+		  }
+		  
+		  .row100 {
+			border-bottom: 1px solid #555;
+		  }
+		  
+		  .row100.body:hover {
+			background: rgba(255, 255, 255, 0.1);
+			transition: 0.3s;
+		  }
+		  
+		  .cell100 {
+			padding: 12px;
+		  }
+		  
+		  @media (max-width: 800px) {
+			.schedule {
+			  flex-direction: column;
+			  align-items: center;
+			}
+		  
+			.schedule-box {
+			  width: 100%;
+			}
+		  }
+		  
+		  .column {
 			float: left;
-			width: 45%; /* Adjusted width to accommodate horizontal padding */
+			width: 45%;
 			padding-left: 10px;
 			padding-right: 10px;
 			margin-left: 10px;
 			margin-right: 10px;
-			box-sizing: border-box; /* Ensures padding doesn't increase the width */
-			border-radius: 10px; /* Curved borders */
-			border: 1px solid #ccc; /* Optional: Adds a subtle border */
+			box-sizing: border-box;
+			border-radius: 10px;
+			border: 1px solid #ccc;
 		  }
 		  
-		  /* Clear floats after the columns */
 		  .row:after {
 			content: "";
 			display: table;
 			clear: both;
 		  }
-					
-	</style>
+		
+		/* Modern Prize Table Styles (Combined) */
+		table {
+		  width: 90%;
+		  margin: 20px auto;
+		  border-collapse: collapse;
+		  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		  overflow: hidden;
+		  border-radius: 8px;
+		}
+		
+		th, td {
+		  padding: 16px;
+		  text-align: left;
+		  border-bottom: 1px solid #eee;
+		  transition: background-color 0.3s ease;
+		}
+		
+		th {
+		  background-color: #f5f5f5;
+		  font-weight: 600;
+		  color: #333;
+		  text-transform: uppercase;
+		  letter-spacing: 0.05em;
+		}
+		
+		tr:hover {
+		  background-color: #f0f0f0;
+		}
+		
+		td:hover {
+		  background-color: #e6f2ff;
+		}
+		
+		.prize-name {
+		  font-weight: 500;
+		  color: #555;
+		}
+		
+		.prize-description {
+		  font-size: 0.9em;
+		  color: #777;
+		  line-height: 1.4;
+		}
+		
+		.prize-image {
+		  max-width: 100px;
+		  height: auto;
+		  vertical-align: middle;
+		  margin-right: 10px;
+		  border-radius: 4px;
+		}
+		
+		@media screen and (max-width: 600px) {
+		  table {
+			width: 95%;
+		  }
+		
+		  th, td {
+			padding: 12px;
+			font-size: 0.9em;
+		  }
+		
+		  .hide-on-mobile {
+			display: none;
+		  }
+		}
+		</style>
 </head>
 
 <body class="text-primary">
@@ -186,10 +242,10 @@
 				</div>
 				<div class="row">
 					<div class="column">
-						<b>Build a Solution</b><h6> - Design and code a functional project to solve the challenge and compete for a $1,000 prize pool.</h56>
+						<b>Build a Solution</b><h6> - Design and code a functional project to solve the challenge.</h56>
 					</div>
 					
-					<div class="column"><b>Pitch an Idea</b><h6> - Develop a creative and well-researched solution (without coding) to compete for a $500 prize pool.</h6>
+					<div class="column"><b>Pitch an Idea</b><h6> - Develop a creative and well-researched solution (without coding).</h6>
 					</div>
 				  </div><br><br>
 				<div class="row align-items-center">
@@ -221,8 +277,8 @@
 									<table>
 										<thead>
 											<tr class="row100 head">
-												<th class="column1 header1" style="color:white;font-weight:bold">Time</th>
-												<th class="column2 header1" style="color:white">Event</th>
+												<th class="column1 header1" style="color:black;font-weight:bold">Time</th>
+												<th class="column2 header1" style="color:black">Event</th>
 											</tr>
 										</thead>
 									</table>
@@ -261,8 +317,8 @@
 									<table>
 										<thead>
 											<tr class="row100 head">
-												<th class="column1 header1" style="color:white;font-weight:bold">Time</th>
-												<th class="column2 header1" style="color:white">Event</th>
+												<th class="column1 header1" style="color:black;font-weight:bold">Time</th>
+												<th class="column2 header1" style="color:black">Event</th>
 											</tr>
 										</thead>
 									</table>
@@ -300,18 +356,37 @@
 					<p style="color:#001d75">Our sponsors came together to help us get these prizes to reward the winners of HackVH <span id="currentYearPrizes"></span>!</p>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-5">
-					<div class="border-2 p-5" id="box">
-						<h3 class="font-sans text-2xl" id="boxtext">CODING DIVISION</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">1st - $1000</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">2nd - $500</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">3rd - $250</p>
-					</div>
-					<div class="border-2 p-5">
-						<h3 class="font-sans text-2xl" id="boxtext">CONCEPT DIVISION</h3>
-						<p class="font-serif text-xl mb-5" id="boxtext">1st - $500</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">2nd - $250</p>
-						<p class="font-serif text-xl mb-5" id="boxtext">3rd - $100</p>
-					</div>
+					<table>
+						<thead>
+						  <tr>
+							<th></th>
+							<th>Healthcare</th>
+							<th>Engineering</th>
+							
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td><b>1st</b></td>
+							<td data-label="Prize" class="prize-name">$400</td>
+							<td data-label="Prize" class="prize-name">$400</td>
+							
+						  </tr>
+						  <tr>
+							<td><b>2nd</b></td>
+							<td data-label="Prize" class="prize-name">$200</td>
+							<td data-label="Prize" class="prize-name">$200</td></tr>
+							<tr>
+								<td><b>3rd</b></td>
+								<td data-label="Prize" class="prize-name">$100</td>
+							<td data-label="Prize" class="prize-name">$100</td></tr>
+						  </tbody>
+						
+					  </table>
+					  <div style="text-align: center;">
+						*$100 for Mini-Competition
+					  </div>
+					  
 				</div>
 			</div>
 		</section>
